@@ -1,0 +1,74 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hungryman-api-gateway
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=hungryman-api-gateway"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: hungryman-team
+  system: hungryman
+  dependsOn: 
+    - component:where-for-dinner-ui
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hungryman-availability
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=hungryman-availability"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: hungryman-team
+  system: hungryman
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hungryman-notify
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=hungryman-notify"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: hungryman-team
+  system: hungryman
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hungryman-search-proc
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=hungryman-search-proc"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: hungryman-team
+  system: hungryman
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hungryman-search
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=hungryman-search"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: hungryman-team
+  system: hungryman
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hungryman-ui
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=hungryman-ui"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: hungryman-team
+  system: hungryman
